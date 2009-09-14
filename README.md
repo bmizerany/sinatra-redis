@@ -43,6 +43,6 @@ Install the `sinatra-redis` with rip. No gem support yet.
 
   * Ezra's Mountain West Ruby Conf '09 [Talk](http://mwrc2009.confreaks.com/13-mar-2009-19-24-redis-key-value-nirvana-ezra-zygmuntowicz.html)
 
-### NOTE about README.md
+### NOTE about the rip-off
 
-  This Code and README.md is an adaption of [rtomayko's sinatra-sequel README](http://github.com/rtomayko/sinatra-sequel/tree/master/README.md)
+  This Code and README.md is a heavy adaption of [rtomayko's sinatra-sequel](http://github.com/rtomayko/sinatra-sequel/)
