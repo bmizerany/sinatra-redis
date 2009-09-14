@@ -2,13 +2,13 @@ require 'uri'
 require 'sinatra/redis/rubyredis'
 
 module Sinatra
-  module SequelHelper
+  module RedisHelper
     def redis
       options.redis
     end
   end
 
-  module SequelExtension
+  module RedisExtension
     def redis=(url)
       @redis = nil
       set :redis_url, url
@@ -31,9 +31,9 @@ module Sinatra
       app.set :redis_url, lambda { 
         ENV['REDIS_URL'] || "redis://127.0.0.1:6379/0" 
       }
-      app.helpers SequelHelper
+      app.helpers RedisHelper
     end
   end
 
-  register SequelExtension
+  register RedisExtension
 end
