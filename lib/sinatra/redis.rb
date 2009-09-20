@@ -29,9 +29,7 @@ module Sinatra
   protected
 
     def self.registered(app)
-      app.set :redis_url, lambda { 
-        ENV['REDIS_URL'] || "redis://127.0.0.1:6379/0" 
-      }
+      app.set :redis_url, ENV['REDIS_URL'] || "redis://127.0.0.1:6379/0"
       app.helpers RedisHelper
     end
   end
