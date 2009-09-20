@@ -21,7 +21,8 @@ module Sinatra
         RedisClient.new(
           :host => url.host,
           :port => url.port,
-          :db => url.path[1..-1]
+          :db => url.path[1..-1],
+          :pass => url.password
         )
     end
 

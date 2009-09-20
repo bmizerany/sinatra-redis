@@ -93,6 +93,7 @@ class RedisClient
         @port = opts[:port] || 6379
         @db = opts[:db] || 0
         @timeout = opts[:timeout] || 0
+        @pass = opts[:pass] || ""
         connect_to_server
     end
 
@@ -102,6 +103,7 @@ class RedisClient
 
     def connect_to_server
         @sock = connect_to(@host,@port,@timeout == 0 ? nil : @timeout)
+        call_command(["auth",@pass]) if !@pass.empty?
         call_command(["select",@db]) if @db != 0
     end
 
