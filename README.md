@@ -4,10 +4,18 @@ Sinatra Redis Extension
 Extends [Sinatra](http://www.sinatrarb.com/) with an extension method for
 dealing with redis databases using the rubyredis.rb client library that
 comes with the redis source (pre-packaged with this library for convenience).
-
-Install the `sinatra-redis` with rip. No gem support yet.
+You can Install the `sinatra-redis` with rip
 
     $ rip install git://github.com/bmizerany/sinatra-redis.git
+
+or
+    $ gem install sinatra-redis -s http://gems.gemcutter.org
+or
+
+    $ gem install bmizerany-sinatra-redis -s http://gems.gemcutter.org
+
+and use like:
+
     $ vim sinatra-using-redis.rb
 
     require 'sinatra'
