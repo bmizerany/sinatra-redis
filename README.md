@@ -9,7 +9,7 @@ You can Install the `sinatra-redis` with rip
     $ rip install git://github.com/bmizerany/sinatra-redis.git
 
 or
-    $ gem install sinatra-redis -s http://gems.gemcutter.org
+    $ gem install sinatra-redis -s http://gemcutter.org
 or
 
     $ gem install bmizerany-sinatra-redis -s http://gems.gemcutter.org
@@ -54,6 +54,8 @@ and use like:
 ### NOTE about the rip-off
 
   This Code and README.md is a heavy adaption of [rtomayko's sinatra-sequel](http://github.com/rtomayko/sinatra-sequel/)
+
+# LICENSE
 
 Copyright (c) 2009 Blake Mizerany
 
