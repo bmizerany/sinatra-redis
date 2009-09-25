@@ -12,7 +12,7 @@ or
     $ gem install sinatra-redis -s http://gemcutter.org
 or
 
-    $ gem install bmizerany-sinatra-redis -s http://gems.gemcutter.org
+    $ gem install bmizerany-sinatra-redis -s http://gems.github.com
 
 and use like:
 
