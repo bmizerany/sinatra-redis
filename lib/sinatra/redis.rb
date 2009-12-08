@@ -34,5 +34,7 @@ module Sinatra
     end
   end
 
+  Redis = RedisExtension
+
   register RedisExtension
 end
