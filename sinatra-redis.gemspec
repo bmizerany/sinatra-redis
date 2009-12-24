@@ -3,7 +3,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
 
   s.name = 'sinatra-redis'
-  s.version = '0.1.1'
+  s.version = '0.2.0'
   s.date = '2009-09-21'
 
   s.description = "Extends Sinatra with redis helpers for instant redis use"
@@ -11,6 +11,8 @@ Gem::Specification.new do |s|
 
   s.authors = ["Blake Mizerany"]
   s.email = "blake.mizerany@gmail.com"
+
+  s.add_dependency "redis"
 
   # = MANIFEST =
   s.files = %w[
