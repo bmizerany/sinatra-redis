@@ -4,7 +4,7 @@ require 'redis'
 module Sinatra
   module RedisHelper
     def redis
-      options.redis
+      settings.redis
     end
   end
 
@@ -16,9 +16,10 @@ module Sinatra
     end
 
     def redis
-      url = URI(redis_url)
       @redis ||= (
-        base_options = {
+        url = URI(redis_url)
+
+        base_settings = {
           :host => url.host,
           :port => url.port,
           :db => url.path[1..-1],
@@ -26,8 +27,8 @@ module Sinatra
         }
 
         ::Redis.new(
-          base_options.merge(
-            options.redis_options
+          base_settings.merge(
+            redis_settings
           )
         )
       )
@@ -37,7 +38,7 @@ module Sinatra
 
     def self.registered(app)
       app.set :redis_url, ENV['REDIS_URL'] || "redis://127.0.0.1:6379/0"
-      app.set :redis_options, {}
+      app.set :redis_settings, {}
       app.helpers RedisHelper
     end
   end
