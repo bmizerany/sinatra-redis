@@ -2,7 +2,7 @@ Sinatra Redis Extension
 ========================
 
 Extends [Sinatra](http://www.sinatrarb.com/) with an extension method for
-dealing with redis databases using the rubyredis.rb client library that
+dealing with redis databases using the [redis-rb](http://github.com/ezmobius/redis-rb) client library that
 comes with the redis source (pre-packaged with this library for convenience).
 You can Install the `sinatra-redis` with rip
 
